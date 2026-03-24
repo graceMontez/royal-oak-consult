@@ -318,6 +318,7 @@
         <h4>Contact</h4>
         <p>📧 royaloakgroup663@gmail.com</p>
         <p>📞 +233 24 542 2689</p>
+        <p>📞 +233 24 531 4123</p>
         <p>📍 UCC campus, Ghana</p>
       </div>
     </div>
@@ -388,7 +389,7 @@
       }
 
       // 3. Prepare WhatsApp Message
-      const phoneNumber = "233540450592"; 
+      const phoneNumber = "233245314123"; 
       const message = `New Consultation Request\n\nName: ${name}\nEmail: ${email}\nOrganization: ${org}\nInterest: ${interest}\nGoals: ${goals}`;
 
       // Properly encode the message for URL
@@ -446,8 +447,8 @@
   if (whatsappBtn) {
     whatsappBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      const phoneNumber = "233540450592";
-      const message = encodeURIComponent("Hi! I would like to get consultation from Royal Oak Consult.");
+      const phoneNumber = "233245314123";
+      const message = encodeURIComponent("Hi, I am interested in the consultancy and training services provided by Royal Oak Consult. Could you please share more information on how I can book an initial consultation? Thank you.");
       const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
       window.location.href = whatsappURL;
     });
