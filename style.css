@@ -34,6 +34,7 @@ h1, h2, h3, .serif-heading {
 
 .team-logo img {
   width: 100%;
+  /*ETict*/
   height: 100%;
   object-fit: cover;
 }
@@ -83,6 +84,7 @@ h1, h2, h3, .serif-heading {
   border-radius: 40px;
   font-weight: 600;
   transition: all 0.25s;
+  /*ETict*/
   cursor: pointer;
   display: block;
   text-decoration: none;
@@ -345,7 +347,7 @@ h1, h2, h3, .serif-heading {
 }
 .about-image img {
   width: 600px;
-  height: 500px;
+  height: 700px;
   max-width: none;
   border-radius: 32px;
   object-fit: cover;
