@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Royal Oak Groupe | Empowering MSMEs, Youth & Women</title>
+  <!-- Google Fonts: modern sans + refined serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .team-logo {
+     
+    /*  background-color: blue;  Placeholder color */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-left: 12px;
+    }
+
+    .team-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      margin-right: auto;
+    }
+
+    .brand-logo img {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 50%;
+      background: #ffffff;
+      padding: 0;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .brand-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--oak-dark);
+      line-height: 1;
+    }
+
+    .brand-logo-text span {
+      color: var(--accent-terra);
+      font-weight: 500;
+    }
+
+    .brand-logo-footer .brand-logo-text {
+      color: #f0e2cf;
+      font-size: 1.55rem;
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      width: 100%;
+    }
+
+    .nav-links {
+      margin-left: 1.5rem;
+    }
+
+    .navbar .btn-outline {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 1200;
+      background: #25d366;
+      border: none;
+      padding: 0.85rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: white;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.15s;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .floating-whatsapp:hover {
+      background: #1faa56;
+      transform: translateY(-2px);
+    }
+
+    .leader-note {
+      margin-top: 0.8rem;
+      text-align: center;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #2f3d3b;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      .navbar .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      .brand-logo {
+        margin-right: 0;
+      }
+
+      .nav-links {
+        margin-left: 0;
+        justify-content: center;
+      }
+
+      .navbar .btn-outline {
+        margin-left: 0;
+      }
+
+      .brand-logo img {
+        width: 70px;
+        height: 70px;
+      }
+
+      .brand-logo-text {
+        font-size: 1.35rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .floating-whatsapp {
+        right: 14px;
+        bottom: 14px;
+        padding: 0.75rem 1rem;
+      }
+      .cta-buttons button {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="navbar">
+    <div class="team-logo">
+  <img src="oakpic.png" alt="Team logo">
+    </div>
+  <div class="container">
+    <a href="#" class="brand-logo" aria-label="Royal Oak Consult home">
+      
+      <span class="brand-logo-text">Royal Oak <span>Consult</span></span>
+      
+    </a>
+    <div><button class="btn-outline" id="consultBtn">Get Consultation</button></div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#impact">CSR & Impact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+
+  </div>
+</div>
+
+<!-- Hero Section with Image -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <!--<div class="hero-badge">✨ Empowering MSMEs · Youth · Women</div>-->
+      <h1 style="color:#222036;">Strengthening capacities,<br> building sustainable futures.</h1>
+    <!--  <p>Royal Oak Groupe delivers practical consultancy & tailored training in entrepreneurship, finance, management, IT, and more — driving growth for MSMEs and individuals across Africa and beyond.</p>
+      --><button class="btn-primary" id="heroConsultBtn">Explore Programs →</button>
+     <!-- <div class="hero-stats">
+        <div class="stat-item"><h3>500+</h3><p>MSMEs trained</p></div>
+        <div class="stat-item"><h3>35+</h3><p>expert consultants</p></div>
+        <div class="stat-item"><h3>12</h3><p>countries impacted</p></div>
+      </div>-->
+    </div>
+    
+</section>
+
+<!-- Services Section with Images -->
+<div class="container section" id="services">
+  <div class="section-header">
+    <h2>What we offer</h2>
+    <p>Holistic, interconnected expertise to future-proof your business or career.</p>
+  </div>
+  <div class="cards-grid">
+    <div class="service-card"><div class="card-img"><img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?w=200&h=200&fit=crop" alt="Entrepreneurship"></div><h3>Strategic Entrepreneurship </h3><p>Business modelling, growth plans, and market entry support.</p></div>
+    <div class="service-card"><div class="card-img"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=200&h=200&fit=crop" alt="Accounting"></div><h3>Accounting </h3><p>Financial controls, cashflow management, tax advisory.</p></div>
+    <div class="service-card"><div class="card-img"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&h=200&fit=crop" alt="Management F"></div><h3>Financial Management </h3><p>Organisational design, leadership coaching, performance systems.</p></div>
+    <div class="service-card"><div class="card-img"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=200&h=200&fit=crop" alt="Education"></div><h3>Educational Administration</h3><p>School management systems, curriculum development, EdTech.</p></div>
+    <div class="service-card"><div class="card-img"><img src="marketing.jpg" alt="Marketing"></div><h3>Marketing</h3><p>Brand strategy, social media, customer acquisition.</p></div>
+    <div class="service-card"><div class="card-img"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=200&h=200&fit=crop" alt="IT"></div><h3>Information Technology</h3><p>Business automation, data analytics, custom software advisory.</p></div>
+    <div class="service-card"><div class="card-img"><img src="proc2.avif" alt="Supply Chain"></div><h3>Procurement & Supply Chain</h3><p>Vendor management, cost optimization, ethical sourcing.</p></div>
+    <div class="service-card"><div class="card-img"><img src="manage.jpg" alt="Management"></div><h3>Management</h3><p>Vendor management, cost optimization, ethical sourcing.</p></div>
+  </div>
+</div>
+
+<!-- Training Programs Highlight with Images 
+<div class="section-light" id="training">
+  <div class="container section">
+    <div class="section-header">
+      <h2>Tailored Training Programs</h2>
+      <p>Practical, hands-on workshops and certifications for individuals and corporate teams.</p>
+    </div>
+    <div class="program-list">
+      <div class="program-tag"><div class="program-tag-img"><img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=50&h=50&fit=crop" alt="finance"></div> Financial Literacy for MSMEs</div>
+      <div class="program-tag"><div class="program-tag-img"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=50&h=50&fit=crop" alt="leadership"></div> Women in Leadership</div>
+      <div class="program-tag"><div class="program-tag-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=50&h=50&fit=crop" alt="digital"></div> Digital Marketing Bootcamp</div>
+      <div class="program-tag"><div class="program-tag-img"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=50&h=50&fit=crop" alt="school"></div> School Admin Excellence</div>
+      <div class="program-tag"><div class="program-tag-img"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=50&h=50&fit=crop" alt="procurement"></div> Public Procurement & Tenders</div>
+      <div class="program-tag"><div class="program-tag-img"><img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=50&h=50&fit=crop" alt="IT"></div> IT for Non-Tech Managers</div>
+      <div class="program-tag"><div class="program-tag-img"><img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=50&h=50&fit=crop" alt="agri"></div> Agripreneurship & Value Chain</div>
+    </div>
+    <div style="text-align: center; margin-top: 2.5rem;">
+      <button class="btn-primary" id="trainingBtn">Request Training Calendar →</button>
+    </div>
+  </div>
+</div> -->
+
+<!-- CSR & Youth/Women Empowerment Section with Images -->
+<div class="container section" id="impact">
+  <div class="section-header">
+    <h2>Beyond Business: Social Impact</h2>
+    <p>Investing in youth, women, and inclusive development — aligned with UN SDGs.</p>
+  </div>
+  <div class="impact-grid">
+    <div class="impact-card"><div class="impact-img"><img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=200&h=200&fit=crop" alt="women empowerment"></div><h3>Women Entrepreneurship Hubs</h3><p>Mentorship, seed funding links, and market access for women-led ventures.</p></div>
+    <div class="impact-card"><div class="impact-img"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=200&h=200&fit=crop" alt="youth"></div><h3>Youth Employability Labs</h3><p>Skills training, internship placement, and digital literacy for young professionals.</p></div>
+    <div class="impact-card"><div class="impact-img"><img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=200&h=200&fit=crop" alt="MSME support"></div><h3>MSME Resilience Fund</h3><p>Quality consultation and disaster recovery planning for small businesses.</p></div>
+    <div class="impact-card"><div class="impact-img"><img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=200&h=200&fit=crop" alt="SDGs"></div><h3>SDG 1, 5, 8 Focus</h3><p>Driving poverty reduction, gender equality & decent work through partnerships.</p></div>
+  </div>
+</div>
+
+<!-- About: Vision & Mission + story with Images -->
+<div class="section-light" id="about">
+  <div class="container section">
+    <div class="two-col">
+      <div class="about-text">
+        <h2>Our commitment to transformation</h2>
+        <p>Royal Oak Consult is committed to building stronger businesses, empowering individuals, and fostering sustainable communities. <br> We focus on professionalism, innovation, and impact. </p>
+        <div class="vision-mission">
+          <div class="vm-block"><strong style="color: var(--oak-dark); font-size:1.2rem;"> Vision</strong><p>To become a leading hub for professional training and consultancy that empowers MSMEs, youth, and women to build sustainable livelihoods and contribute to national and global development.</p></div>
+          <div class="vm-block"><strong style="color: var(--oak-dark); font-size:1.2rem;"> Mission</strong><p>Royal Oak Groupe exists to provide high-quality, context-specific consultancy and training services.</p></div>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="IMG-20260324-WA0002.jpg" alt="Leadership team">
+        <p class="leader-note">Dr. Enock Mensah<br>Senior Consultant &amp; Academic Strategist <br>Lecturer/UCC</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Call to Action -->
+<div class="container">
+  <div class="cta-section">
+    <h3>Ready to grow your enterprise or career?</h3>
+    <p>Let's co-create solutions that deliver measurable results and lasting empowerment.</p>
+    <div class="cta-buttons">
+      <button class="btn-light" id="finalCtaBtn">Speak with a specialist</button>
+    </div>
+  </div>
+</div>
+
+<a href="#" class="floating-whatsapp" id="whatsappBtn" aria-label="Chat with us on WhatsApp">WhatsApp us</a>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="#" class="brand-logo brand-logo-footer" aria-label="Royal Oak Consult home">
+          <img src="oakpic.png" alt="Royal Oak Consult logo">
+          <span class="brand-logo-text">Royal Oak <span>Consult</span></span>
+        </a>
+        <p style="margin-top: 0.8rem;">Practical expertise, social conscience.<br>Empowering MSMEs, women & youth.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <ul style="list-style: none; margin-top: 0.5rem;">
+          <li><a href="#">Consulting services</a></li>
+          
+          <li><a href="#">CSR Programs</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📧 royaloakgroup663@gmail.com</p>
+        <p>📞 +233 24 542 2689</p>
+        <p>📍 UCC campus, Ghana</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 Royal Oak Consult — Empowering MSMEs, Youth & Women. All rights reserved. Aligned with UN SDGs.
+    </div>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div id="contactModal" class="modal">
+  <div class="modal-card">
+    <span class="close-modal" id="closeModalBtn">&times;</span>
+    <h3>Request expert consultation</h3>
+    <p>Tailored solutions for your business or career.</p>
+    <form id="consultForm">
+  <input type="text" placeholder="Full name" id="fullName" required>
+  <input type="email" placeholder="Email address" id="emailAddr" required>
+  <input type="text" placeholder="Organization / Business (optional)" id="orgName">
+  <select id="interestSelect">
+    <option>Consultancy Services</option>
+    <option>Training Programs</option>
+    <option>CSR Partnership</option>
+    <option>Youth/Women Initiative</option>
+  </select>
+  <textarea id="goals" rows="2" placeholder="Tell us about your goals..."></textarea>
+  <button type="submit" class="btn-primary" style="background: var(--oak-dark); width:100%;">Send Request</button>
+</form>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('contactModal');
+  const openBtns = document.querySelectorAll('#consultBtn, #heroConsultBtn, #trainingBtn, #finalCtaBtn');
+  const closeBtn = document.getElementById('closeModalBtn');
+  const consultForm = document.getElementById('consultForm');
+
+  // Debug: Check if form exists
+  if (!consultForm) {
+    console.error('Form not found!');
+  } else {
+    console.log('Form found and ready');
+  }
+
+  // Unified Submit Logic
+  if (consultForm) {
+    consultForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      console.log('Form submitted');
+
+      // 1. Get and Trim Data
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('emailAddr').value.trim();
+      const org = document.getElementById('orgName').value.trim() || "Not specified";
+      const interest = document.getElementById('interestSelect').value;
+      const goals = document.getElementById('goals').value.trim();
+
+      console.log('Form data:', {name, email, org, interest, goals});
+
+      // 2. Validation
+      if (!name || !email) {
+        alert('Please provide name and email.');
+        return;
+      }
+      if (!email.includes('@') || !email.includes('.')) {
+        alert('Valid email required.');
+        return;
+      }
+
+      // 3. Prepare WhatsApp Message
+      const phoneNumber = "233540450592"; 
+      const message = `New Consultation Request\n\nName: ${name}\nEmail: ${email}\nOrganization: ${org}\nInterest: ${interest}\nGoals: ${goals}`;
+
+      // Properly encode the message for URL
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+      console.log('WhatsApp URL created:', whatsappURL);
+
+      // Show alert before redirect
+      alert('Opening WhatsApp...');
+
+      // 4. Open WhatsApp - redirect directly
+      try {
+        window.location.href = whatsappURL;
+        console.log('Redirecting to WhatsApp');
+      } catch(err) {
+        console.error('Error opening WhatsApp:', err);
+      }
+
+      // Reset form after a delay
+      setTimeout(() => {
+        consultForm.reset();
+        closeModalFunc();
+      }, 1000);
+    });
+  }
+
+  // Modal Functions
+  function openModalFunc() {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModalFunc() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+    if (consultForm) consultForm.reset();
+  }
+
+  // Event Listeners for Opening/Closing
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModalFunc();
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModalFunc);
+  window.addEventListener('click', (e) => { 
+    if (e.target === modal) closeModalFunc(); 
+  });
+
+  // WhatsApp Button Handler
+  const whatsappBtn = document.getElementById('whatsappBtn');
+  if (whatsappBtn) {
+    whatsappBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const phoneNumber = "233540450592";
+      const message = encodeURIComponent("Hi! I would like to get consultation from Royal Oak Consult.");
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.location.href = whatsappURL;
+    });
+  }
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('Service Worker Registered!', reg))
+      .catch(err => console.log('Registration Failed', err));
+  });
+}
+</script>
+</body>
+</html>

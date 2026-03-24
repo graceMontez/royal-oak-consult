@@ -1,0 +1,29 @@
+{
+  "short_name": "Royal Oak",
+  "name": "Royal Oak Groupe Consultancy",
+  "description": "Professional consultancy and tailored training services for MSMEs, youth, and women.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#4B3621",
+  "shortcuts": [
+    {
+      "name": "Request Consultation",
+      "url": "/#contactModal",
+      "description": "Get expert business advice"
+    }
+  ]
+}
